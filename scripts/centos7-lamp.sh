@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yum update -y --exclude=kernel
-yum install -y  nano git unzip screen wget
+yum install -y vim git unzip screen wget
 yum install -y httpd httpd-devel httpd-tools
 systemctl start httpd.service
 systemctl stop httpd.service
