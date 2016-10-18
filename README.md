@@ -5,5 +5,5 @@
 * SELinux is enabled. (Get used to it until we come up with something better.) 
 
 To test, enter in a browser:
-`localhost:8085` This should return the greeting 
+`localhost:8085` This should return the greeting. 
 `localhost:8085/info.php` This should return the php version info.
