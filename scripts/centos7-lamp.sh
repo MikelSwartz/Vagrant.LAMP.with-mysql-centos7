@@ -18,4 +18,12 @@ yum install -y mysql mysql-server mysql-devel
 systemctl start mysqld.service
 mysql -u root -e "SHOW DATABASES";
 
+cd /vagrant
+sudo -u vagrant wget -q https://raw.githubusercontent.com/MikelSwartz/vagrant/master/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/MikelSwartz/vagrant/master/files/info.php
+
+
+chcon -v --type=httpd_sys_content_t /var/www/html/index.html
+chcon -v --type=httpd_sys_content_t /var/www/html/info.php
+
 systemctl start httpd.service
