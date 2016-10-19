@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yum update -y --exclude=kernel
-yum install -y vim git unzip screen wget nc telnet net-tools
+yum install -y vim git unzip screen wget nmap telnet net-tools
 
 #Enable ssh passwords (For testing)
 sed -e '/PasswordAuthentication\ no/ s/^#*/#/' -i /etc/ssh/sshd_config
